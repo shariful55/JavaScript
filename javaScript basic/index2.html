@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of JavaScript data types </title>
+
+</head>
+<body>
+    
+    <script>
+        let foo=42; // foo is now a number
+        foo='bar' // foo is now a string
+        foo=true // foo is now a boolean
+        // javascript if statementk
+        // if (boolean conditional ){
+        //     // code to execute if the conditional is true 
+        // }
+
+        // if(boolean conditional){
+        //     console.log("boolean conditional resolved to true");
+
+        // }else{
+        //     console.log("boolean conditional resolved to false ");
+        // }
+        // javascript for loop 
+        // for (control variable; boolean conditional; counter){
+        //     // code to execute repeatedly if the conditional is true 
+        // }
+
+        // for(var i=0; i<4; i++){
+        //     console.log("I print only when the boolean conditional is true ");
+        // }
+        function checkInfinity(){
+            const maxNumber=Math.pow(10,1000);// max positive number
+            if(maxNumber===Infinity){
+                console.log('let\'s call it Infinity! ');
+                // expected output: " Let's call it Infinity! "
+            }
+            console.log(1/maxNumber);
+            // expected output: 0
+
+        }
+
+
+        function checkNumber(smallNumber){
+            if(smallNumber===Number.NEGATIVE_INFINITY){
+                return 'Process number as -Infinity';
+            }
+            return smallNumber;
+        }
+
+        console.log(checkNumber(-Number.MAX_VALUE));
+        // expected output: -1.79769313348623157e+308
+        console.log(checkNumber(-Number.MAX_VALUE*2));
+
+
+
+        function check_Big_Number(bigNumber){
+
+            if(bigNumber===Number.POSITIVE_INFINITY){
+                return 'Process number as Infinity ';
+            }
+            return bigNumber;
+
+
+        }
+        console.log(check_Big_Number(Number.MAX_VALUE));
+        // expected output: 1.7976931348623157e+308
+
+        console.log(check_Big_Number(Number.MAX_VALUE*2));
+        // expected output: Process number as Infinity 
+
+        console.log(Number.isFinite(1/0));
+        // expected output: false
+        console.log(Number.isFinite(10/5));
+        // expected output: true
+        console.log(Number.isFinite(0/0));
+        // expected output: false 
+        
+    </script>
+</body>
+</html>

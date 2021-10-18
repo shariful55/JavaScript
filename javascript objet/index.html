@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example of javascript object literal </title>
+</head>
+<body>
+<!-- creating object literal  -->
+    <!-- <script>
+        emp={id:102, name:"shariful islam", salary:4000} 
+        document.write(emp.id+","+emp.name+","+emp.salary)
+    </script> -->
+
+<!-- creating instance of Object  -->
+    <!-- <script>
+        var emp=new Object();
+        emp.id=101;
+        emp.name="shariful islam";
+        emp.salary=2000;
+        document.write(emp.id+","+emp.name+", "+ emp.salary)
+    </script> -->
+<!-- using object constructor -->
+    
+    <!-- <script>
+        function emp(id, name, salary ){
+            this.id=id;
+            this.name=name;
+            this.salary=salary;
+        }
+        e=new emp(102, "adiyat islam", 5000)
+        document.write(e.id+" ,"+e.name+", "+ e.salary)
+    </script> -->
+    <script>  
+function emp(id,name,salary){  
+this.id=id;  
+this.name=name;  
+this.salary=salary;  
+  
+this.changeSalary=changeSalary;  
+function changeSalary(otherSalary){  
+this.salary=otherSalary;  
+}  
+}  
+e=new emp(103,"Sonoo Jaiswal",30000);  
+document.write(e.id+" "+e.name+" "+e.salary);  
+e.changeSalary(45000);  
+document.write("<br>"+e.id+" "+e.name+" "+e.salary);  
+</script>
+
+
+</body>
+</html>
