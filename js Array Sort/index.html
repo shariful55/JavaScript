@@ -1,176 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
-</head>
-<body>
+  </head>
+  <body>
     <!-- <button onclick="myFunction1()"> Sort Alphabitically </button>
     <button onclick="myFunction2()"> Sort Numerically </button> -->
 
-<!-- <button onclick="myFunction1()">Show Reverse Sorting </button>
+    <!-- <button onclick="myFunction1()">Show Reverse Sorting </button>
 <div id="demo"></div>
 <div id="demo1"></div> -->
-<!-- <button onclick="myFunction()">show lowest value </button>
+    <!-- <button onclick="myFunction()">show lowest value </button>
 <button onclick="myFunction1()">show highest value </button> -->
-<div id="demo"></div>
-<div id="demo1"></div>
-<p>The highest number : <span id="demo5"></span>  absolutely</p>
-<button onclick="myFunction()">click me </button>
-<script>
+    <div id="demo"></div>
+
+    <!-- <div id="demo1"></div>
+    <p>The highest number : <span id="demo5"></span> absolutely</p>
+    <button onclick="myFunction()">click me</button> -->
 
 
-var cars=[{type:"volvo", year:2016},{type:"saab", year:2001},{type:"vw", year:2012}];
 
-//cars.sort(function(a, b){return a.year-b.year})
+    <script>
 
-function myFunction(){
-    cars.sort(function(a,b){
-        let x=a.type.toLowercase();
-        let y=b.type.toLowercase();
-        if(x<y) {return -1};
-        if(x>y) {return 1};
-        return 0;
-    });
-    displayCars();
-}
 
-function displayCars(){
-document.getElementById("demo").innerHTML=cars[0].type+"  "+cars[0].year+cars[1].type+"  "+cars[1].year+cars[2].type+"  "+cars[2].year;
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+const keys=fruits.keys();
+
+let x=" ";
+
+for(let y of keys){
+  x+=y+"<br> ";
+  document.getElementById("demo").innerHTML=x;
 }
 
 
+//javascript Array.from method here 
 
-
-    // var points=[50,40,2,6,8,5,90,100,500];
-    // document.getElementById("demo2").innerHTML=mathMax(points);
-    // document.getElementById("demo1").innerHTML=mathmin(points);
-    
-
-// //Max number finding
-// function mathMax(arr){
-//     let l=arr.length-1;
-//     let max=-Infinity;
-//     while (l--) {
-//         if (arr[l]>max) {
-//             max=arr[l];
-//         }
-//     }
-//     return max;
-// }
-
-// Min number finding
-
-// function mathmin(arr){
-//     let l=arr.length-1;
-//     let min=Infinity;
-//     while (l--) {
-//         if (arr[l]<min) {
-//             min=arr[l];
-//         }
-//     }
-//     return min;
-// }
-
-    //mathmax and mathmin number getting out here 
-    // function mathmax(arr){
-    //     return Math.max.apply(null,arr);
-    // }
-
-
-    // function mathmin(arr){
-    //     return Math.min.apply(null,arr);
-    // }
-
-    // function myFunction() {
-    //     points.sort(function(a,b){return a-b});
-    //     // highest value of the array 
-    //     document.getElementById("demo").innerHTML=points[points.length-1];
-
-    // }
-
-    
-    // function myFunction1() {
-    //     points.sort(function(a,b){return b-a});
-    //     // highest value of the array 
-    //     document.getElementById("demo").innerHTML=points[0];
-
-    // }
-
-    // function myFunction() {
-    //     points.sort(function(a,b){return a-b});
-    //     // lowest value of the array 
-    //     document.getElementById("demo").innerHTML=points[0];
-
-    // }
-
-    
-    // function myFunction1() {
-    //     points.sort(function(a,b){return b-a});
-    //     // lowest value of the array 
-    //     document.getElementById("demo").innerHTML=points[points.length-1];
-
-    // }
+// const myarr=Array.from("ABCDEFGHIJKLMNOPQRSTU");
+// document.getElementById("demo").innerHTML=myarr;
 
 
 
-    //Comparison sort function 
-    // var points=[1,50,40,2,6,8,5,90,100];
-    // document.getElementById("demo").innerHTML=points;
-
-    // function myFunction1(){
-    //     points.sort();
-    //     document.getElementById("demo").innerHTML=points;
-    // }
-
-    // function myFunction2(){
-    //     points.sort(function(a,b){return a-b});
-    //     document.getElementById("demo").innerHTML=points;
-    // }
-
-    // reverse sort function
-
-//      var points=[1,50,40,2,6,8,5,90,100];
-//      points.sort(function(a,b){return b-a});
-//         document.getElementById("demo").innerHTML=points;
-
-// function myFunction1(){
-//         points.reverse();
-//         document.getElementById("demo").innerHTML=points;
-// }
-
-// sort randomly in array
-
-// var points=[1,50,40,2,6,8,5,90,100];
-// document.getElementById("demo").innerHTML=points;
-
-// function myFunction1(){
-//     points.sort(function(a,b){return 0.5-Math.random()});
-//     document.getElementById("demo").innerHTML=points;
-// }
 
 
-// // This is fisher yates shuffle method 
-// function myFunction(){
-    
-// for(var i=points.length-1;i>0;i--){
-//     var j=Math.floor(Math.random()*(i+1));
-//     var temp=points[i];
-//     points[i]=points[j];
-//     points[j]=temp;
-// }
-// document.getElementById("demo").innerHTML=points;
 
+
+//const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+
+// const num=fruits.includes("Apple");
+// document.getElementById("demo").innerHTML = "This statement is: "+num;
+
+// document.getElementById("demo").innerHTML ="Apple is found at index: " +
+// (fruits.indexOf("Apple")+1);
+
+
+
+// javascript every function
+
+// const numbers=[80,30,44,55,21,44,15,38,42];
+
+// const num=numbers.every(myFunction);
+
+// document.getElementById("demo").innerHTML="All number over 100: "+num;
+
+// function myFunction(value,index,array)
+// {
+//   return value>100
 // }
 
 
 
+// javascript reduce function here 
+
+// const numbers=[20,50,40,70];
+// const num=numbers.reduce(myFunction,200);
+
+// document.getElementById("demo").innerHTML=num;
+// function myFunction(total,num,index,array){
+//   return total+num;
+// }
 
 
-</script>
+//javascript filter function
 
-</body>
+// const numbers=[40,8,90,100,1,5,10,20,30,50,60,70,80,90,100,110,120,130,140,150,160,170,180,190,200,210,220,230,240,250,260,270,280,290,300,310,320,330,340,350,360,370,380,390,400,410,420,430,440,450,460,470,480,490,500,510,520,530,540,550,560,570,580,590,600,610,620,630,640,650,660,670,680,690,700,710,720,730,740,750,760,770,780,790,800,810,820,830,840,850,860,870,880,890,900,910,920,930,940,950,960,970,980,990,1000];
+// const numOver50=numbers.filter(myFunction);
+
+// document.getElementById("demo").innerHTML = numOver50;
+
+// function myFunction(value,index,array)
+// {
+//   return value >800;
+// }
+
+
+
+// javascript map function
+        // const number1=[90,23,67,45,10,5];
+        // const number2= number1.map(myFunction);
+        // document.getElementById("demo").innerHTML = number2;
+
+        // function myFunction(value,index,array) {
+        //     return value*3;
+        // }
+
+
+        // var carSerial=[25,30,60,40,50,60,70,80,90,100];
+
+        // var txt="";
+
+        // carSerial.forEach(myFunction);
+        // document.getElementById("demo").innerHTML=txt;
+
+        // function myFunction(value,index,array)
+        // {
+        //     txt=txt+value+" <br> ";
+        // }
+
+
+
+
+    //   var cars = [
+    //     { type: "volvo", year: 2016 },
+    //     { type: "saab", year: 2001 },
+    //     { type: "vw", year: 2012 }
+    //   ];
+
+    //   //cars.sort(function(a, b){return a.year-b.year})
+
+    //   function myFunction() {
+    //     cars.sort(function (a, b) {
+    //       let x = a.type.toLowercase();
+    //       let y = b.type.toLowercase();
+    //       if (x < y) {
+    //         return -1;
+    //       }
+    //       if (x > y) {
+    //         return 1;
+    //       }
+    //       return 0;
+    //     });
+    //     displayCars();
+    //   }
+
+    //   function displayCars() {
+    //     document.getElementById("demo").innerHTML =
+    //       cars[0].type +
+    //       "  " +
+    //       cars[0].year +
+    //       cars[1].type +
+    //       "  " +
+    //       cars[1].year +
+    //       cars[2].type +
+    //       "  " +
+    //       cars[2].year;
+    //   }
+
+      // var points=[50,40,2,6,8,5,90,100,500];
+      // document.getElementById("demo2").innerHTML=mathMax(points);
+      // document.getElementById("demo1").innerHTML=mathmin(points);
+
+      // //Max number finding
+      // function mathMax(arr){
+      //     let l=arr.length-1;
+      //     let max=-Infinity;
+      //     while (l--) {
+      //         if (arr[l]>max) {
+      //             max=arr[l];
+      //         }
+      //     }
+      //     return max;
+      // }
+
+      // Min number finding
+
+      // function mathmin(arr){
+      //     let l=arr.length-1;
+      //     let min=Infinity;
+      //     while (l--) {
+      //         if (arr[l]<min) {
+      //             min=arr[l];
+      //         }
+      //     }
+      //     return min;
+      // }
+
+      //mathmax and mathmin number getting out here
+      // function mathmax(arr){
+      //     return Math.max.apply(null,arr);
+      // }
+
+      // function mathmin(arr){
+      //     return Math.min.apply(null,arr);
+      // }
+
+      // function myFunction() {
+      //     points.sort(function(a,b){return a-b});
+      //     // highest value of the array
+      //     document.getElementById("demo").innerHTML=points[points.length-1];
+
+      // }
+
+      // function myFunction1() {
+      //     points.sort(function(a,b){return b-a});
+      //     // highest value of the array
+      //     document.getElementById("demo").innerHTML=points[0];
+
+      // }
+
+      // function myFunction() {
+      //     points.sort(function(a,b){return a-b});
+      //     // lowest value of the array
+      //     document.getElementById("demo").innerHTML=points[0];
+
+      // }
+
+      // function myFunction1() {
+      //     points.sort(function(a,b){return b-a});
+      //     // lowest value of the array
+      //     document.getElementById("demo").innerHTML=points[points.length-1];
+
+      // }
+
+      //Comparison sort function
+      // var points=[1,50,40,2,6,8,5,90,100];
+      // document.getElementById("demo").innerHTML=points;
+
+      // function myFunction1(){
+      //     points.sort();
+      //     document.getElementById("demo").innerHTML=points;
+      // }
+
+      // function myFunction2(){
+      //     points.sort(function(a,b){return a-b});
+      //     document.getElementById("demo").innerHTML=points;
+      // }
+
+      // reverse sort function
+
+      //      var points=[1,50,40,2,6,8,5,90,100];
+      //      points.sort(function(a,b){return b-a});
+      //         document.getElementById("demo").innerHTML=points;
+
+      // function myFunction1(){
+      //         points.reverse();
+      //         document.getElementById("demo").innerHTML=points;
+      // }
+
+      // sort randomly in array
+
+      // var points=[1,50,40,2,6,8,5,90,100];
+      // document.getElementById("demo").innerHTML=points;
+
+      // function myFunction1(){
+      //     points.sort(function(a,b){return 0.5-Math.random()});
+      //     document.getElementById("demo").innerHTML=points;
+      // }
+
+      // // This is fisher yates shuffle method
+      // function myFunction(){
+
+      // for(var i=points.length-1;i>0;i--){
+      //     var j=Math.floor(Math.random()*(i+1));
+      //     var temp=points[i];
+      //     points[i]=points[j];
+      //     points[j]=temp;
+      // }
+      // document.getElementById("demo").innerHTML=points;
+
+      // }
+    </script>
+  </body>
 </html>
